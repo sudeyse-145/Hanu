@@ -170,15 +170,18 @@ export default function HananApp() {
   async function sendResults() {
     if (!window.emailjs) return;
     setSending(true);
-    const text = questions
-      .map((q, i) => `Q${i + 1}: ${q.q}\nA: ${answers[i]}`)
-      .join("\n\n");
+    const htmlText = questions
+      .map((q, i) => `<div style="margin-bottom: 16px; padding: 12px; background: #fff8f2; border-left: 4px solid #e8637a; border-radius: 4px;">
+        <div style="font-weight: bold; color: #2a1a2e; margin-bottom: 6px;">Q${i + 1}: ${q.q}</div>
+        <div style="color: #c04b67; font-size: 1.1em;">A: ${answers[i]}</div>
+      </div>`)
+      .join("");
 
     try {
       await window.emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        { to_email: YOUR_EMAIL, answers: text, from_name: "Hanuuu 💜" }
+        { to_email: YOUR_EMAIL, answers: htmlText, from_name: "Hanuuu 💜" }
       );
       setPhase("sent");
     } catch (e) {
