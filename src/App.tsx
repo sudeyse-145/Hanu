@@ -13,7 +13,7 @@ declare global {
 /* ─────────────────────────────────────────────
    EMAILJS CONFIG — fill these in after setup
    ───────────────────────────────────────────── */
-const EMAILJS_SERVICE_ID  = "service_ppc0uhd";
+const EMAILJS_SERVICE_ID  = "service_malqsvn";
 const EMAILJS_TEMPLATE_ID = "template_0bddydl";
 const EMAILJS_PUBLIC_KEY  = "v-juzKs4gA3BvSCJ0";
 const YOUR_EMAIL          = "graypoints@gmail.com"; 
