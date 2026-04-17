@@ -216,7 +216,7 @@ export default function HananApp() {
         {phase === "landing" && (
           <div className="card" key="landing">
             <p className="landing-title">
-              <em>Hanan</em> (Hanuuu 💜💜💜),<br />
+              <em></em> Hanuuu 💜💜💜,<br />
               would you like to see<br />
               what I prepared for you? ❤️
             </p>
